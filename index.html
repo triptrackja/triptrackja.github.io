@@ -1,31 +1,339 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>TripTrack</title>
-    <link rel="shortcut icon" href="Risorse/immagini/TripTrackLogo.png" type="image/x-icon">
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="assets/images/TripTrackLogo.png" type="image/x-icon">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;1,400&family=Poppins:ital,wght@0,600;0,700;1,600;1,700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <title>TripTrack - WanderlustJA</title>
 </head>
 
 <body>
-    <div class="manutenzione">
-        <div class="circle1"></div>
-        <div class="circle2"></div>
-        <h1>Manutenzione in corso</h1>
-        <div class="separator"></div>
-        <h3>Ci stiamo preparando per un fantastico viaggio</h3>
-        <p>Insieme</p>
-        <div class="circle3"></div>
-        <div class="circle4"></div>
-    </div>
+    <!-- ========== HEADER ========== -->
+    <header class="header" id="header">
+
+        <nav class="navbar container" id="navbar">
+            <a href="#" class="logo">
+                <img src="assets/images/TripTrackLogo.png" width="40px" height="40px" alt="Logo">
+                TripTrack
+            </a>
+            <div class="navbar_menu" id="navbar-menu">
+                <ul class="navbar_list">
+                    <li class="navbar_item">
+                        <a href="#home" class="navbar_link">Home</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="#about" class="navbar_link">Chi siamo</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="#app" class="navbar_link">App</a>
+                    </li>
+                    <li class="navbar_item">
+                        <a href="#contacts" class="navbar_link">Contatti</a>
+                    </li>
+                </ul>
+
+                <button class="close_btn" id="close-btn">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+
+            <button class="open_btn" id="open-btn">
+                <i class='bx bx-menu'></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- ========== HOME ========== -->
+        <section class="home section" id="home">
+            <div class="home_container container grid">
+                <div class="home_img">
+                    <img src="assets/images/home/Home1.png" class="h_img1" alt="home image 1" srcset="">
+                    <div class="circle1">
+                        <i class='bx bxs-paper-plane'></i>
+                    </div>
+                    <div class="circle2">
+                        <i class='bx bxs-paper-plane'></i>
+                    </div>
+                    <img src="assets/images/home/Home2.png" class="h_img2" alt="home image 2" srcset="">
+                </div>
+                <div class="home_text">
+                    <h1 class="home_title">
+                        TripTrack
+                    </h1>
+                    <p class="home_subtitle">
+                        L'app per salvare <br> i tuoi viaggi
+                    </p>
+                    <a href="#about" class="button">
+                        Scopri di più
+                        <i class='bx bx-chevron-right'></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CHI SIAMO ========== -->
+        <section class="about section" id="about">
+            <span class="section_subtitle">Chi siamo</span>
+            <h1 class="section_title">WanderlustJA</h1>
+            <div class="about_container container grid">
+                <div class="about_text">
+                    <p>WanderlustJA nasce nell’ottobre 2022 con lo scopo di fornire un app che consenta di tracciare i
+                        propri viaggi e condividerli con i propri amici. L’azienda è costituita da un gruppo di
+                        diplomandi uniti per progettare un’app innovativa, il cui scopo è quello di offrire la
+                        possibilità di viaggiare insieme ai propri amici o da soli e scoprire nuovi luoghi.
+                    </p>
+                </div>
+                <!-- <img src="assets/images/chisiamo.jpg" alt="Chi siamo" srcset=""> -->
+            </div>
+        </section>
+
+        <!-- ========== TEAM ========== -->
+        <section class="team section" id="team">
+            <span class="section_subtitle">Dietro le quinte</span>
+            <h1 class="section_title">Il nostro team</h1>
+            <div class="team_container container grid">
+                <article class="team_member">
+                    <img src="assets/images/chi_siamo/mazzanti.png" alt="" class="team_img">
+                    <h3 class="team_name">Gabriele Mazzanti</h3>
+                    <span class="team_role">CEO</span>
+                </article>
+
+                <article class="team_member">
+                    <img src="assets/images/chi_siamo/dromedari.png" alt="" class="team_img">
+                    <h3 class="team_name">Francesca Dromedari</h3>
+                    <span class="team_role">Amministratore delegato</span>
+                </article>
+
+                <article class="team_member">
+                    <img src="assets/images/chi_siamo/doci.png" alt="" class="team_img">
+                    <h3 class="team_name">Leandro Doci</h3>
+                    <span class="team_role">Project Engineer</span>
+                </article>
+
+                <article class="team_member">
+                    <img src="assets/images/chi_siamo/fuca.png" alt="" class="team_img">
+                    <h3 class="team_name">Alessia Fucà</h3>
+                    <span class="team_role">Project Manager</span>
+                </article>
+
+                <article class="team_member">
+                    <img src="assets/images/chi_siamo/conte.png" alt="" class="team_img">
+                    <h3 class="team_name">Alessio Conte</h3>
+                    <span class="team_role">Programmatore</span>
+                </article>
+
+                <article class="team_member">
+                    <img src="assets/images/chi_siamo/fornaciari.png" alt="" class="team_img">
+                    <h3 class="team_name">Francesco Fornaciari</h3>
+                    <span class="team_role">Amministratore Finanze</span>
+                </article>
+
+                <article class="team_member">
+                    <img src="assets/images/chi_siamo/canti.png" alt="" class="team_img">
+                    <h3 class="team_name">Viola Canti</h3>
+                    <span class="team_role">Responsabile Marketing</span>
+                </article>
+
+                <article class="team_member">
+                    <img src="assets/images/chi_siamo/medea.png" alt="" class="team_img">
+                    <h3 class="team_name">Carmine Medea</h3>
+                    <span class="team_role">Risorse Umane
+                    </span>
+                </article>
+            </div>
+        </section>
+
+        <!-- ========== APP ========== -->
+        <section class="app section" id="app">
+            <span class="section_subtitle">Il nostro prodotto</span>
+            <h1 class="section_title">Trip Track</h1>
+            <div class="app_container container grid">
+                <div>
+                    <div class="app_img">
+                        <img src="assets/images/app/Home.PNG" alt="" id="changeImg">
+                    </div>
+
+                    <div class="app_btn">
+                        <button class="app_btn" onclick="changeImage('assets/images/app/Home.png')">
+                            <i class='bx bxs-home'></i>
+                        </button>
+                        <button class="app_btn" onclick="changeImage('assets/images/app/MyTrips.PNG')">
+                            <i class='bx bxs-bookmark'></i>
+                        </button>
+                        <button class="app_btn" onclick="changeImage('assets/images/app/NewTrip.PNG')">
+                            <i class='bx bx-plus'></i>
+                        </button>
+                        <button class="app_btn" onclick="changeImage('assets/images/app/Friends.PNG')">
+                            <i class='bx bxs-user'></i>
+                        </button>
+                        <button class="app_btn" onclick="changeImage('assets/images/app/Explore.PNG')">
+                            <i class='bx bx-search'></i>
+                        </button>
+                        <button class="app_btn" onclick="changeImage('assets/images/app/Game.PNG')">
+                            <i class='bx bxs-dice-6'></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="app_text">
+                    <p>Il prodotto di punta di WanderlustJA è “Trip Track”, un app destinata a chi vuole viaggiare
+                        divertendosi e scoprendo nuovi luoghi da poter condividere con i propri amici. È una soluzione
+                        "smart" ed innovativa con lo scopo di unire le persone e farle tornare a viaggiare in modo lento
+                        abbattendo così il "fast trip".
+
+                        <br><br>
+
+                        "Trip Track" è un'applicazione funzionante su ogni tipo di device e sistema operativo
+                        (multipiattaforma) che permette agli utenti di tenere traccia dei propri viaggi in maniera
+                        diversa. L’applicativo della app consente di viaggiare e vedere direttamente dal proprio
+                        dispositivo mobile, utilizzando la posizione, i propri spostamenti. L’app consente inoltre di
+                        fare delle foto e salvarle in una bacheca virtuale per poter ricordare i viaggi fatti. Permette
+                        anche di imparare viaggiando, grazie ai quiz che vengono posti ogni volta che viene scattata una
+                        foto.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== STRENGTH ========== -->
+        <section class="strength section" id="strength">
+            <span class="section_subtitle">Perchè la nostra app</span>
+            <h1 class="section_title">Punti di forza</h1>
+            <div class="strength_container container swiper-container">
+                <div class="swiper-wrapper">
+
+                    <div class="strength_card swiper-slide">
+                        <div class="strength_icon">
+                            <i class='bx bxs-group'></i>
+                        </div>
+                        <div class="strength_text">
+                            <h3 class="strength_title">Partner con aziende, luoghi di ristoro e alloggio</h3>
+                            <span class="strength_description">
+                                Questo aspetto offre un valore aggiunto all'esperienza dell'utente, che può trovare
+                                facilmente luoghi dove mangiare e dormire durante il suo viaggio.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="strength_card swiper-slide">
+                        <div class="strength_icon">
+                            <i class='bx bxs-dice-6'></i>
+                        </div>
+                        <div class="strength_text">
+                            <h3 class="strength_title">Quiz suoi luoghi visitati della zona</h3>
+                            <span class="strength_description">
+                                Questa caratteristica offre un'esperienza interattiva e divertente durante il viaggio,
+                                che può aiutare gli utenti a imparare e a scoprire di più sulla storia dei luoghi che
+                                visitano.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="strength_card swiper-slide">
+                        <div class="strength_icon">
+                            <i class='bx bxs-low-vision'></i>
+                        </div>
+                        <div class="strength_text">
+                            <h3 class="strength_title">Inclusione dei ciechi</h3>
+                            <span class="strength_description">
+                                Questo è un aspetto importante e innovativo dell'app, che rende possibile per i ciechi
+                                utilizzare l'app per la loro esperienza di viaggio.
+                                In sintesi, l'app TrickTrack si distingue per le sue collaborazioni con le aziende, la
+                                sua esperienza interattiva attraverso i quiz sui monumenti visitati, la sua attenzione
+                                all'ambiente attraverso il calcolo del percorso con il minor dispendio di energia e la
+                                sua accessibilità per i ciechi attraverso il sistema vocale.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="strength_card swiper-slide">
+                        <div class="strength_icon">
+                            <i class='bx bxs-leaf'></i>
+                        </div>
+                        <div class="strength_text">
+                            <h3 class="strength_title">Eco-Friendly</h3>
+                            <span class="strength_description">
+                                Parlando di itinerario l’app aiuterà l’utente con consigli sui luoghi di ristoro più
+                                vicini e con i mezzi di trasporto disponibili nelle vicinanze (per diminuire i consumi e
+                                l’inquinamento verranno scelti mezzi come monopattini, biciclette, mezzi pubblici,
+                                ecc…).
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" id="contacts">
+        <div class="footer_container container grid">
+            <div>
+                <a href="#" class="logo">
+                    <img src="assets/images/TripTrackLogo.png" width="40px" height="40px" alt="Logo">
+                    TripTrack
+                </a>
+                <p class="footer_text">
+                    L'app per salvare <br> i tuoi viaggi
+                </p>
+            </div>
+            <div class="footer_content">
+                <div>
+                    <h3 class="footer_title">
+                        Contattaci
+                    </h3>
+                    <ul class="footer_list">
+                        <a href="mailto:triptrackja.info@gmail.com" target="_blank" class="footer_link">
+                            <i class='bx bxl-gmail'></i>
+                        </a>
+                        <a href="https://www.facebook.com/profile.php?id=100091400952456" target="_blank"
+                            class="footer_link">
+                            <i class='bx bxl-facebook-circle'></i>
+                        </a>
+                        <a href="https://instagram.com/triptrack.ja?igshid=YmMyMTA2M2Y=" target="_blank"
+                            class="footer_link">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                        <a href="https://youtube.com/@TripTrackJA" target="_blank" class="footer_link">
+                            <i class='bx bxl-youtube'></i>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <span class="footer_bottom">
+            <p>Copyright &copy; 2023 Wanderlust. Designed by <span>Wanderlust</span> students.</p>
+        </span>
+    </footer>
+
+    <!-- ========== UP ========== -->
+    <a href="#" class="up" id="up">
+        <i class='bx bx-up-arrow-alt'></i>
+    </a>
+
+    <script src="assets/javascript/scrollreveal.min.js"></script>
+    <script src="assets/javascript/swiper-bundle.min.js"></script>
+    <script src="assets/javascript/script.js"></script>
 </body>
 
 </html>
